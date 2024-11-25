@@ -12,6 +12,8 @@ class ElasticSearchService
     private string $scheme;
     private string $host;
     private string $port;
+    private const string IMPORT_DIRECTORY = 'import';
+    private array $importFiles;
 
     public function __construct(
         protected Filesystem $filesystem,
@@ -20,6 +22,7 @@ class ElasticSearchService
         $this->scheme = config('olc.elasticsearch.scheme');
         $this->host = config('olc.elasticsearch.host');
         $this->port = config('olc.elasticsearch.port');
+        $this->importFiles = $this->filesystem->files(self::IMPORT_DIRECTORY);
     }
 
     public function getIndexes(): array
@@ -53,7 +56,7 @@ class ElasticSearchService
 
     public function elasticDump(string $index): bool|string
     {
-        $filePath = 'import' . DIRECTORY_SEPARATOR . $index . now()->format('_Ymd_His') . '.json';
+        $filePath = self::IMPORT_DIRECTORY . DIRECTORY_SEPARATOR . $index . now()->format('_Ymd_His') . '.json';
         $fullPath = $this->filesystem->path($filePath);
         $url = $this->scheme . '://' . $this->host . ':' . $this->port . '/' . $index;
         $result = $this->elasticDump->process($url, $fullPath);
@@ -98,8 +101,8 @@ class ElasticSearchService
     public function getDumpList(string $indexName): array
     {
         $dumps = array_filter(
-            $this->filesystem->files('import'),
-            fn(string $file) => str($file)->startsWith('import/' . $indexName),
+            $this->importFiles,
+            fn(string $file) => str(basename($file))->startsWith($indexName),
         );
 
         return array_combine($dumps, $dumps);
