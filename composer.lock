@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d575ab91fec71c7dad05cbf3290a59c",
+    "content-hash": "ae2e3eefcab54428b0c5bd4a3428c711",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -3751,31 +3751,31 @@
         },
         {
             "name": "nunomaduro/termwind",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "42c84e4e8090766bbd6445d06cd6e57650626ea3"
+                "reference": "52915afe6a1044e8b9cee1bcff836fb63acf9cda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/42c84e4e8090766bbd6445d06cd6e57650626ea3",
-                "reference": "42c84e4e8090766bbd6445d06cd6e57650626ea3",
+                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/52915afe6a1044e8b9cee1bcff836fb63acf9cda",
+                "reference": "52915afe6a1044e8b9cee1bcff836fb63acf9cda",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": "^8.2",
-                "symfony/console": "^7.1.5"
+                "symfony/console": "^7.1.8"
             },
             "require-dev": {
-                "illuminate/console": "^11.28.0",
-                "laravel/pint": "^1.18.1",
+                "illuminate/console": "^11.33.2",
+                "laravel/pint": "^1.18.2",
                 "mockery/mockery": "^1.6.12",
                 "pestphp/pest": "^2.36.0",
-                "phpstan/phpstan": "^1.12.6",
+                "phpstan/phpstan": "^1.12.11",
                 "phpstan/phpstan-strict-rules": "^1.6.1",
-                "symfony/var-dumper": "^7.1.5",
+                "symfony/var-dumper": "^7.1.8",
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
             },
             "type": "library",
@@ -3818,7 +3818,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
-                "source": "https://github.com/nunomaduro/termwind/tree/v2.2.0"
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.0"
             },
             "funding": [
                 {
@@ -3834,20 +3834,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-15T16:15:16+00:00"
+            "time": "2024-11-21T10:39:51+00:00"
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.26.0",
+            "version": "v4.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "a49b947c0c109f4fd112f9b5c6d6cb3e6baf8b50"
+                "reference": "1841a6047b4d23d1d353821b8a03f8d599a94143"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/a49b947c0c109f4fd112f9b5c6d6cb3e6baf8b50",
-                "reference": "a49b947c0c109f4fd112f9b5c6d6cb3e6baf8b50",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/1841a6047b4d23d1d353821b8a03f8d599a94143",
+                "reference": "1841a6047b4d23d1d353821b8a03f8d599a94143",
                 "shasum": ""
             },
             "require": {
@@ -3861,13 +3861,13 @@
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "friendsofphp/php-cs-fixer": "^3.64.0",
-                "infection/infection": "^0.29.6",
+                "friendsofphp/php-cs-fixer": "^3.65.0",
+                "infection/infection": "^0.29.8",
                 "phpbench/phpbench": "^1.3.1",
-                "phpstan/phpstan": "^1.12.4",
-                "phpstan/phpstan-phpunit": "^1.4.0",
-                "phpstan/phpstan-strict-rules": "^1.6.1",
-                "phpunit/phpunit": "^11.3.6"
+                "phpstan/phpstan": "^2.0.2",
+                "phpstan/phpstan-phpunit": "^2.0.1",
+                "phpstan/phpstan-strict-rules": "^2",
+                "phpunit/phpunit": "^11.4.3"
             },
             "suggest": {
                 "ext-iconv": "To handle non UTF-8 CSV files (if \"php-mbstring\" is not already installed or is too limited)",
@@ -3915,7 +3915,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.26.0"
+                "source": "https://github.com/openspout/openspout/tree/v4.27.0"
             },
             "funding": [
                 {
@@ -3927,7 +3927,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-24T14:04:43+00:00"
+            "time": "2024-11-25T10:23:43+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -7525,16 +7525,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "2.0.1",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "b56450eed252f6801410d810c8e1727224ae0743"
+                "reference": "b1d923f88091c6bf09699efcd7c8a1b1bfd7351d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/b56450eed252f6801410d810c8e1727224ae0743",
-                "reference": "b56450eed252f6801410d810c8e1727224ae0743",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/b1d923f88091c6bf09699efcd7c8a1b1bfd7351d",
+                "reference": "b1d923f88091c6bf09699efcd7c8a1b1bfd7351d",
                 "shasum": ""
             },
             "require": {
@@ -7559,7 +7559,7 @@
             "authors": [
                 {
                     "name": "Lars Moelleken",
-                    "homepage": "http://www.moelleken.org/"
+                    "homepage": "https://www.moelleken.org/"
                 }
             ],
             "description": "Portable ASCII library - performance optimized (ascii) string functions for php.",
@@ -7571,7 +7571,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-ascii/issues",
-                "source": "https://github.com/voku/portable-ascii/tree/2.0.1"
+                "source": "https://github.com/voku/portable-ascii/tree/2.0.3"
             },
             "funding": [
                 {
@@ -7595,7 +7595,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-08T17:03:00+00:00"
+            "time": "2024-11-21T01:49:47+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7659,16 +7659,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.14.8",
+            "version": "v3.14.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "6a09266c89802946fb15d5f2f74906d48734a7b5"
+                "reference": "2e805a6bd4e1aa83774316bb062703c65d0691ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/6a09266c89802946fb15d5f2f74906d48734a7b5",
-                "reference": "6a09266c89802946fb15d5f2f74906d48734a7b5",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/2e805a6bd4e1aa83774316bb062703c65d0691ef",
+                "reference": "2e805a6bd4e1aa83774316bb062703c65d0691ef",
                 "shasum": ""
             },
             "require": {
@@ -7727,7 +7727,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.14.8"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.14.9"
             },
             "funding": [
                 {
@@ -7739,7 +7739,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-25T12:49:44+00:00"
+            "time": "2024-11-25T14:51:20+00:00"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -8134,16 +8134,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.24.0",
+            "version": "v1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "a136842a532bac9ecd8a1c723852b09915d7db50"
+                "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/a136842a532bac9ecd8a1c723852b09915d7db50",
-                "reference": "a136842a532bac9ecd8a1c723852b09915d7db50",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
+                "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
                 "shasum": ""
             },
             "require": {
@@ -8191,9 +8191,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.24.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.24.1"
             },
-            "time": "2024-11-07T15:11:20+00:00"
+            "time": "2024-11-21T13:46:39+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
@@ -8436,6 +8436,99 @@
                 "source": "https://github.com/Jean85/pretty-package-versions/tree/2.1.0"
             },
             "time": "2024-11-18T16:19:46+00:00"
+        },
+        {
+            "name": "larastan/larastan",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/larastan/larastan.git",
+                "reference": "88f46e3f2cd9d2a14dba13ef293b822a75832e62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/88f46e3f2cd9d2a14dba13ef293b822a75832e62",
+                "reference": "88f46e3f2cd9d2a14dba13ef293b822a75832e62",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^11.15.0",
+                "illuminate/container": "^11.15.0",
+                "illuminate/contracts": "^11.15.0",
+                "illuminate/database": "^11.15.0",
+                "illuminate/http": "^11.15.0",
+                "illuminate/pipeline": "^11.15.0",
+                "illuminate/support": "^11.15.0",
+                "php": "^8.2",
+                "phpmyadmin/sql-parser": "^5.9.0",
+                "phpstan/phpstan": "^2.0.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0",
+                "laravel/framework": "^11.15.0",
+                "mockery/mockery": "^1.6",
+                "nikic/php-parser": "^5.3",
+                "orchestra/canvas": "^v9.1.3",
+                "orchestra/testbench-core": "^9.5.2",
+                "phpstan/phpstan-deprecation-rules": "^2.0.0",
+                "phpunit/phpunit": "^10.5.16"
+            },
+            "suggest": {
+                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                },
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Larastan\\Larastan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Can Vural",
+                    "email": "can9119@gmail.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Larastan - Discover bugs in your code without running it. A phpstan/phpstan wrapper for Laravel",
+            "keywords": [
+                "PHPStan",
+                "code analyse",
+                "code analysis",
+                "larastan",
+                "laravel",
+                "package",
+                "php",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/larastan/larastan/issues",
+                "source": "https://github.com/larastan/larastan/tree/v3.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/canvural",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-15T09:38:34+00:00"
         },
         {
             "name": "laravel/pail",
@@ -9644,6 +9737,93 @@
             "time": "2024-11-09T15:12:26+00:00"
         },
         {
+            "name": "phpmyadmin/sql-parser",
+            "version": "5.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmyadmin/sql-parser.git",
+                "reference": "b14fd66496a22d8dd7f7e2791edd9e8674422f17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmyadmin/sql-parser/zipball/b14fd66496a22d8dd7f7e2791edd9e8674422f17",
+                "reference": "b14fd66496a22d8dd7f7e2791edd9e8674422f17",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "phpmyadmin/motranslator": "<3.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^1.1",
+                "phpmyadmin/coding-standard": "^3.0",
+                "phpmyadmin/motranslator": "^4.0 || ^5.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.9.12",
+                "phpstan/phpstan-phpunit": "^1.3.3",
+                "phpunit/phpunit": "^8.5 || ^9.6",
+                "psalm/plugin-phpunit": "^0.16.1",
+                "vimeo/psalm": "^4.11",
+                "zumba/json-serializer": "~3.0.2"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "phpmyadmin/motranslator": "Translate messages to your favorite locale"
+            },
+            "bin": [
+                "bin/highlight-query",
+                "bin/lint-query",
+                "bin/sql-parser",
+                "bin/tokenize-query"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpMyAdmin\\SqlParser\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The phpMyAdmin Team",
+                    "email": "developers@phpmyadmin.net",
+                    "homepage": "https://www.phpmyadmin.net/team/"
+                }
+            ],
+            "description": "A validating SQL lexer and parser with a focus on MySQL dialect.",
+            "homepage": "https://github.com/phpmyadmin/sql-parser",
+            "keywords": [
+                "analysis",
+                "lexer",
+                "parser",
+                "query linter",
+                "sql",
+                "sql lexer",
+                "sql linter",
+                "sql parser",
+                "sql syntax highlighter",
+                "sql tokenizer"
+            ],
+            "support": {
+                "issues": "https://github.com/phpmyadmin/sql-parser/issues",
+                "source": "https://github.com/phpmyadmin/sql-parser"
+            },
+            "funding": [
+                {
+                    "url": "https://www.phpmyadmin.net/donate/",
+                    "type": "other"
+                }
+            ],
+            "time": "2024-11-10T04:10:31+00:00"
+        },
+        {
             "name": "phpstan/phpdoc-parser",
             "version": "2.0.0",
             "source": {
@@ -9689,6 +9869,64 @@
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.0"
             },
             "time": "2024-10-13T11:29:49+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "6c98c7600fc717b2c78c11ef60040d5b1e359c82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6c98c7600fc717b2c78c11ef60040d5b1e359c82",
+                "reference": "6c98c7600fc717b2c78c11ef60040d5b1e359c82",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-17T14:17:00+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -11223,7 +11461,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2"
+        "php": "^8.3"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"

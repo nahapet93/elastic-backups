@@ -7,8 +7,8 @@ use App\Models\ElasticBackup;
 use App\Services\ElasticSearchService;
 use Filament\Forms\Components\Select;
 use Filament\Notifications\Notification;
-use Filament\Tables\Actions\Action;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -56,7 +56,7 @@ class ElasticBackupResource extends Resource
                                 ->danger()
                                 ->send();
                         }
-                    )
+                    ),
             ])
             ->paginated(false);
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Services\ElasticSearchService;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Client\ConnectionException;
 use Sushi\Sushi;
 
 /**
@@ -13,7 +14,12 @@ class ElasticBackup extends Model
 {
     use Sushi;
 
-    public function getRows()
+    /**
+     * @return array<string[]>
+     *
+     * @throws ConnectionException
+     */
+    public function getRows(): array
     {
         return app(ElasticSearchService::class)->getIndexes();
     }
