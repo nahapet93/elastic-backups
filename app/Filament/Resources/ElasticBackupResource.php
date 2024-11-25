@@ -3,15 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ElasticBackupResource\Pages;
-use App\Filament\Resources\ElasticBackupResource\RelationManagers;
 use App\Models\ElasticBackup;
-use Filament\Forms;
-use Filament\Forms\Form;
+use App\Services\ElasticSearchService;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Actions\Action;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ElasticBackupResource extends Resource
 {
@@ -19,46 +17,39 @@ class ElasticBackupResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                //
-            ]);
-    }
-
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('uuid'),
+                TextColumn::make('dump'),
+                TextColumn::make('last_restore_date'),
             ])
-            ->filters([
-                //
-            ])
+            ->defaultGroup('prefix')
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Action::make('restore')
+                    ->form([
+                        Select::make('file')
+                            ->label('Dump file')
+                            ->options(
+                                fn (ElasticBackup $backup) => app(ElasticSearchService::class)
+                                    ->getDumpList($backup->name)
+                            )
+                            ->required(),
+                    ])
+                    ->action(
+                        fn (array $data, ElasticBackup $backup) => app(ElasticSearchService::class)
+                            ->elasticImport($backup->name, $data['file'])
+                    )
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
+            ->paginated(false);
     }
 
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListElasticBackups::route('/'),
-            'create' => Pages\CreateElasticBackup::route('/create'),
-            'edit' => Pages\EditElasticBackup::route('/{record}/edit'),
         ];
     }
 }

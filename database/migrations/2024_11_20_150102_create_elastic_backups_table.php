@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('elastic_backups', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('index_name')->nullable();
+            $table->string('dump_name')->nullable();
+            $table->timestamp('last_restored_at')->nullable();
         });
     }
 
