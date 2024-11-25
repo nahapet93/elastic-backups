@@ -6,6 +6,7 @@ use App\Filament\Resources\ElasticBackupResource\Pages;
 use App\Models\ElasticBackup;
 use App\Services\ElasticSearchService;
 use Filament\Forms\Components\Select;
+use Filament\Notifications\Notification;
 use Filament\Tables\Actions\Action;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
@@ -39,8 +40,22 @@ class ElasticBackupResource extends Resource
                             ->required(),
                     ])
                     ->action(
-                        fn (array $data, ElasticBackup $backup) => app(ElasticSearchService::class)
-                            ->elasticImport($backup->name, $data['file'])
+                        function (array $data, ElasticBackup $backup) {
+                            $import = app(ElasticSearchService::class)
+                                ->elasticImport($backup->name, $data['file']);
+
+                            if ($import) {
+                                return Notification::make()
+                                    ->title('Restore from dump successful.')
+                                    ->success()
+                                    ->send();
+                            }
+
+                            return Notification::make()
+                                ->title('Could not restore from dump.')
+                                ->danger()
+                                ->send();
+                        }
                     )
             ])
             ->paginated(false);

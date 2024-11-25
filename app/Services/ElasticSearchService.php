@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
@@ -26,6 +27,7 @@ class ElasticSearchService
         $url = $this->scheme . '://' . $this->host . ':' . $this->port;
         $response = Http::baseUrl($url)->get('/_stats');
         $lines = $response->json()['indices'];
+        $restores = $this->getRestores();
 
         $olcIndexes = array_filter(
             $lines,
@@ -34,13 +36,16 @@ class ElasticSearchService
         );
 
         return array_map(
-            fn(string $key, array $value): array => [
-                'name' => $key,
-                'uuid' => $value['uuid'],
-                'prefix' => $this->getPrefix($key),
-                'dump' => $this->getLastRestore($key)?->dump_name,
-                'last_restore_date' => $this->getLastRestore($key)?->last_restored_at
-            ],
+            function (string $key, array $value) use ($restores): array {
+                $lastRestore = $restores->where('index_name', $key)->sortByDesc('id')->first();
+                return [
+                    'name' => $key,
+                    'uuid' => $value['uuid'],
+                    'prefix' => $this->getPrefix($key),
+                    'dump' => $lastRestore?->dump_name,
+                    'last_restore_date' => $lastRestore?->last_restored_at
+                ];
+            },
             array_keys($olcIndexes),
             array_values($olcIndexes),
         );
@@ -85,19 +90,16 @@ class ElasticSearchService
         return $matches ? $matches[0] : '';
     }
 
-    private function getLastRestore(string $indexName)//: ?stdClass
+    private function getRestores(): Collection
     {
-        return(DB::table('elastic_backups')
-            ->where('index_name', $indexName)
-            ->orderBy('id', 'desc')
-            ->first());
+        return DB::table('elastic_backups')->get();
     }
 
     public function getDumpList(string $indexName): array
     {
         $dumps = array_filter(
             $this->filesystem->files('import'),
-            fn (string $file) => str($file)->startsWith('import/' . $indexName),
+            fn(string $file) => str($file)->startsWith('import/' . $indexName),
         );
 
         return array_combine($dumps, $dumps);

@@ -1,3 +1,6 @@
+.phpstorm.meta.php
+_ide_helper.php
+
 /.phpunit.cache
 /node_modules
 /public/build
