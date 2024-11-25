@@ -5,7 +5,6 @@ namespace App\Services;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
-use stdClass;
 
 class ElasticSearchService
 {
